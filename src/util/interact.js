@@ -1,10 +1,8 @@
-// require('dotenv').config();
-const alchemyKey = "wss://eth-goerli.g.alchemy.com/v2/whetCIbBXq3KoYRz5bT5jnTXrA_ICz-m";
+const alchemyKey = process.env.REACT_APP_ALCHEMY_KEY;
 const { createAlchemyWeb3 } = require("@alch/alchemy-web3");
 const web3 = createAlchemyWeb3(alchemyKey);
-
 const contractABI = require("../contract-abi.json");
-const contractAddress = "0xfc5BC169504FF1000D085B3B6395E6af77da3467";
+const contractAddress = process.env.CONTRACT_ADDRESS;
 
 export const helloWorldContract = new web3.eth.Contract(
     contractABI,

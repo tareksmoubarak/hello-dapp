@@ -119,7 +119,7 @@ export default function Home() {
 
         <div style={{width: 500, maxWidth: '100%'}}>
           <div className='row'>
-            <div div className="form-group">
+            <div className="form-group">
               <label htmlFor="exampleInputEmail1">Current Message</label>
               <input type="text" disabled className="form-control" placeholder={message} />
             </div>
@@ -131,7 +131,7 @@ export default function Home() {
               <input type="text" className="form-control" placeholder="Update the message in your smart contract" onChange={(e) => setNewMessage(e.target.value)} value={newMessage}/>
               <p id="status">{status}</p>
             </div>
-            <button onClick={onUpdatePressed} style={{marginTop: 20, float: 'right'}}>Submit</button>
+            <button onClick={onUpdatePressed} style={{marginTop: 20, float: 'right'}} className='btn btn-primary'>Submit</button>
             </div>
           </div>
         </div>
